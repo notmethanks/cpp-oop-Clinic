@@ -1,63 +1,53 @@
-Quản Lý Phòng Khám
-Giới thiệu
+🏥 Quản Lý Phòng Khám
+📌 Giới thiệu
 
-Chương trình mô phỏng hệ thống quản lý phòng khám với các chức năng cơ bản: quản lý bệnh nhân, bác sĩ, lịch hẹn và lịch sử khám chữa bệnh.
+Ứng dụng mô phỏng hệ thống quản lý phòng khám nhỏ, hỗ trợ quản lý:
 
-Chức năng chính
+👨‍⚕️ Bác sĩ
 
-Thêm bệnh nhân thường và bệnh nhân mãn tính
+🧑‍🦰 Bệnh nhân thường và bệnh nhân mãn tính
 
-Thêm bác sĩ với chuyên khoa
+📅 Lịch hẹn khám
 
-Lập lịch hẹn giữa bệnh nhân và bác sĩ
+📝 Lịch sử khám chữa bệnh
 
-Xem danh sách bệnh nhân, bác sĩ, lịch hẹn
+✨ Chức năng chính
 
-Cập nhật tình trạng hẹn khám (ví dụ: Completed, Cancelled)
+➕ Thêm bệnh nhân thường
 
-Cấu trúc chương trình
+➕ Thêm bệnh nhân mãn tính (kế thừa từ bệnh nhân thường, có thêm thông tin bệnh mãn tính)
 
-Patient: lớp bệnh nhân cơ bản
+➕ Thêm bác sĩ với chuyên khoa
 
-ChronicPatient: kế thừa từ Patient, có thêm thông tin bệnh mãn tính
+📆 Lập lịch hẹn giữa bệnh nhân và bác sĩ
 
-Doctor: quản lý thông tin bác sĩ và các cuộc hẹn được giao
+📋 Xem danh sách bệnh nhân, bác sĩ, lịch hẹn
 
-Appointment: chứa thông tin về ngày, giờ, lý do hẹn, tình trạng, mã bệnh nhân và mã bác sĩ
+🔄 Cập nhật trạng thái lịch hẹn (Scheduled / Completed / Cancelled)
 
-Clinic: lớp chính quản lý toàn bộ danh sách bệnh nhân, bác sĩ và lịch hẹn
-
-Cách sử dụng
-
-Biên dịch chương trình:
-
+🏗️ Cấu trúc chương trình
+Lớp	Mô tả
+Patient	Quản lý thông tin bệnh nhân cơ bản (ID, tên, tuổi, lịch sử khám)
+ChronicPatient	Kế thừa từ Patient, thêm bệnh mãn tính & ngày tái khám
+Doctor	Quản lý thông tin bác sĩ, chuyên khoa & danh sách lịch hẹn
+Appointment	Chứa thông tin ngày, giờ, lý do, trạng thái, bệnh nhân & bác sĩ
+Clinic	Lớp trung tâm quản lý toàn bộ bệnh nhân, bác sĩ, lịch hẹn
+⚙️ Hướng dẫn sử dụng
+🖥️ Biên dịch & chạy
 g++ main.cpp -o clinic
-
-
-Chạy chương trình:
-
 ./clinic
 
-
-Thực hiện các thao tác qua menu:
-
-1: Thêm bệnh nhân
-
-2: Thêm bệnh nhân mãn tính
-
-3: Thêm bác sĩ
-
-4: Xem danh sách bệnh nhân
-
-5: Xem danh sách bác sĩ
-
-6: Lập lịch hẹn
-
-7: Xem danh sách lịch hẹn
-
-0: Thoát
-
-Ví dụ chạy thử
+📜 Menu thao tác
+Số	Chức năng
+1	Thêm bệnh nhân
+2	Thêm bệnh nhân mãn tính
+3	Thêm bác sĩ
+4	Xem danh sách bệnh nhân
+5	Xem danh sách bác sĩ
+6	Lập lịch hẹn
+7	Xem danh sách lịch hẹn
+0	Thoát
+🧪 Ví dụ chạy thử
 
 Input (qua menu):
 
@@ -85,12 +75,14 @@ Nguyen Van A can schedule appointment as needed.
 Appointment scheduled successfully.
 Appointment: 01/10/2025 08:00, Reason: Kiem tra suc khoe, Patient: BN01, Doctor: BS01, Status: Scheduled
 
-Kết luận
+📚 Kết luận
 
-Bài tập áp dụng kiến thức về:
+Bài tập áp dụng kiến thức:
 
-Kế thừa, đa hình trong C++
+🏗️ Lập trình hướng đối tượng trong C++
 
-Quản lý đối tượng bằng vector và con trỏ
+🧩 Kế thừa và đa hình
 
-Tổ chức chương trình theo hướng đối tượng
+📦 Quản lý dữ liệu bằng vector
+
+🔑 Đóng gói và tổ chức chương trình khoa học
